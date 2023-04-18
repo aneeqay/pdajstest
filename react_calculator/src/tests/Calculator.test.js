@@ -102,13 +102,12 @@ describe('Calculator', () => {
 
   it('calculator.clearClick() - clear the running total without affecting the calculation', () => {
     fireEvent.click(button9)
-    fireEvent.click(subtractButton)
-    fireEvent.click(button6)
+    fireEvent.click(addButton)
     fireEvent.click(clearButton)
     fireEvent.click(addButton)
-    fireEvent.click(button2)
+    fireEvent.click(button6)
     fireEvent.click(equalsButton)
-    expect(runningTotal.textContent).toEqual('5')
+    expect(runningTotal.textContent).toEqual('15')
   })
   
 })
